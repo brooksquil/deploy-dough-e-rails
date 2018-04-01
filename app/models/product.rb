@@ -1,5 +1,4 @@
 class Product < ApplicationRecord
-  belongs_to :product_type
-  belongs_to :quantity_type
-  belongs_to :company
+  has_many :order_products
+	has_many :orders, through: :order_products
 end
